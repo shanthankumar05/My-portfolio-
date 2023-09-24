@@ -1,0 +1,204 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+/* Add this CSS code to your styles.css file */
+
+/* Introduction styles */
+#about {
+    background-color: #0083b0; /* Set your desired background color */
+    color: white;
+    text-align: center;
+    padding: 200px 0; /* Increase the height as needed */
+    position: relative; /* To position the hand animation */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block; /* To keep the hand animation on the same line */
+}
+
+/* Waving hand animation */
+h1::after {
+    content: '👋'; /* You can replace this with an image or other animation */
+    display: inline-block;
+    font-size: 2rem;
+    animation: wave 2s infinite; /* Waving animation */
+}
+
+
+/* Typing animation for text */
+.typing-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 5s steps(50, end), fadeIn 1s ease-out;
+    border-right: 2px solid white; /* Create a typing cursor effect */
+    padding-right: 10px; /* Add some space for cursor */
+}
+
+/* Keyframe animation for typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Keyframe animation for text fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(30deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-30deg);
+    }
+}
+
+/* Project card styles */
+#projects {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.project {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 33%; /* Each project takes up 33% of the container width */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white; /* Background color for each project */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project h3 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.project:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    background-color: #ff9900; /* Change background color on hover */
+}
+
+/* Add this CSS code to your styles.css file */
+#last-section {
+    text-align: center;
+    padding: 50px 0;
+    background-color:slategray; /* Background color for the section */
+}
+
+.center-text {
+    text-align: center; /* Center-align the text within its container */
+}
+
+.center-text p {
+    font-size: 1.5rem;
+    color: #fff; /* Text color */
+    font-weight: bold;
+    text-transform: uppercase; /* Convert text to uppercase */
+    letter-spacing: 2px; /* Adjust letter spacing */
+}
+
+.center-text p::before,
+.center-text p::after {
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #ff9900; /* Line color */
+    margin: 0 10px; /* Spacing around the lines */
+}
+.small-text {
+    font-size: 1rem; /* Set a smaller font size for the small text */
+    font-weight: lighter; /* Set a lighter font weight for the small text */
+    color: #ccc; /* Adjust the color for the small text */
+    margin-top: 10px; /* Add spacing between paragraphs */
+}
+/* Social media link styles */
+/* CSS styles for the social links in the HTML provided */
+.social-links {
+    text-align: center; /* Center-align the social links */
+    margin-top: 20px; /* Add spacing between text and social links */
+}
+
+.social-links a {
+    display: inline-flex; /* Display the links inline as flex items */
+    align-items: center; /* Center-align the items vertically */
+    margin: 0 10px; /* Add spacing between the links */
+    text-decoration: none; /* Remove underlines from the links */
+    color: #333; /* Text color for the links (adjust as needed) */
+    font-weight: bold; /* Make the text bold (adjust as needed) */
+}
+
+.social-links img {
+    max-width: 32px; /* Limit the maximum width of the images */
+    height: auto;
+    margin-right: 5px; /* Add spacing between the image and text */
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
